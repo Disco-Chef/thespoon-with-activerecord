@@ -1,0 +1,8 @@
+<h1>The Great Eggscape Menus</h1>
+
+<%= link_to "Create a new Restaurant", new_restaurant_path %>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant)  %> - <%= '⭐' * restaurant.rating %></li>
+  <% end %>
+</ul>
